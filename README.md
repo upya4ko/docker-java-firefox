@@ -1,4 +1,4 @@
-# java-firefox
+# docker-java-firefox
 
 Docker app to get working java in browser in moddern life .
 
