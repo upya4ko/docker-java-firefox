@@ -12,7 +12,6 @@ services:
 
   front-novnc:
     build: novnc
-    #image: novn-demo:latest
     container_name: "novnc-front"
     restart: always
     networks:
