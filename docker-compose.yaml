@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  app:
+    build: firefox
+    container_name: "java-firefox"
+    restart: always
+    networks:
+      - ff-network
+    deploy:
+      replicas: 1
+
+  front-novnc:
+    build: novnc
+    #image: novn-demo:latest
+    container_name: "novnc-front"
+    restart: always
+    networks:
+      - ff-network
+    ports:
+      - 8085:80
+    deploy:
+      replicas: 1
+
+networks:
+  ff-network:
+
